@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <main class="game-container">
+    <h1>Snake Game</h1>
+    <div class="score-line">Score: <span id="score">0</span> | Best: <span id="best">0</span></div>
+    <div class="board-area">
+      <div id="game-board"></div>
+      <div id="game-overlay">
+        <div><h2 id="message-title">Snake Game</h2><p id="message-text">Use arrow keys or WASD to move.</p><button id="start-button">Start Game</button></div>
+      </div>
+    </div>
+    <div class="buttons"><button id="pause-button" disabled>Pause</button></div>
+    <p class="help">Move: Arrow keys or W A S D. Pause: Space bar.</p>
+    <div class="mobile-buttons">
+      <button data-direction="UP">↑</button>
+      <div><button data-direction="LEFT">←</button><button data-direction="DOWN">↓</button><button data-direction="RIGHT">→</button></div>
+    </div>
+  </main>
+  <script type="module" src="JS/main.js"></script>
+</body>
+</html>
