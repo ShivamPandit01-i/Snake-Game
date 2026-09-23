@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 20px;
+  background: #eeeeee;
+  color: #222222;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.game-container { width: min(95vw, 500px); margin: 20px auto; }
+h1 { margin: 0 0 10px; }
+.score-line { margin: 12px; font-size: 18px; }
+.board-area { position: relative; }
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  width: 100%;
+  aspect-ratio: 1;
+  border: 3px solid #333333;
+  background: white;
+}
+.cell { border: 1px solid #eeeeee; }
+.snake { background: green; }
+.head { background: darkgreen; }
+.food { background: red; border-radius: 50%; }
+#game-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #000000bb;
+  color: white;
+}
+#game-overlay.hidden { display: none; }
+#game-overlay p { line-height: 1.5; }
+button { padding: 10px 16px; font-size: 16px; cursor: pointer; }
+button:disabled { cursor: not-allowed; }
+.buttons { margin-top: 10px; }
+.help { color: #444444; }
+.mobile-buttons { display: none; margin-top: 12px; }
+.mobile-buttons button { min-width: 52px; margin: 3px; }
+@media (max-width: 600px) {
+  .mobile-buttons { display: block; }
+}
